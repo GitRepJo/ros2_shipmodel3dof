@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/include/eigen3",
+                "/usr/include/boost/math/interpolators/**",
+                "${workspaceFolder}/include/**",
+                "/opt/ros/foxy/include",
+                "/home/${USER}/dev_ws/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,35 @@
+# Parameters for Nomoto model
+delta:  -40.0 # Positive value equals rudder deflection to the left[degree]
+rpm : -300.0 # Rounds per minute of propeller
+
+a_x : -1.0 # Arbitrary surge scaling function 
+b_x : 0.1 # Arbitrary surge scaling function 
+a_y : -0.1 # Arbitrary sway scaling function 
+b_y : 0.05 # Arbitrary sway scaling function 
+K: 1.0 # Hydrodynamic constant dependent on vessel
+T: 0.1167 # Time constant dependent on vessel
+
+# Parameters for simulation
+
+step: 0.1 # Stepsize for integration []
+time: 0.02 # Simulation time [sec]
+
+initYaw: 90.0 # 0 degree aligned with positive x-axis, 90 degree aligned with positive y-axis [degree]
+initX: 0.0 # Carthesian global coordinates, vessel center [meter]
+initY: 0.0 # Carthesian global coordinates, vessel center [meter]
+
+initYawRate: 0.0 # Initial yaw rate in [degree/s^2]
+initXVelocity: 0.0 # X Velocity [m/s]
+initYVelocity: 0.0 # Y Velocity [m/s]
+
+terminal_output: true # Write result struct to terminal if true
+
+# Parameters for ROS2
+
+frame_id: "map"
+topic_listen_steering: "nomoto/steering"
+topic_publish_path: "model_path"
+topic_publish_pose: "model_pose"
+equ_file: "/home/jo/dev_ws/src/shipmodel3dof/config/config.yaml"
+sim_file: "/home/jo/dev_ws/src/shipmodel3dof/config/config.yaml"
+frequency: 50 # Simulation loop exection in milliseconds
